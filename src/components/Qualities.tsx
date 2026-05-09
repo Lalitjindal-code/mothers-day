@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 const qualities = [
   { icon: '🌟', text: 'Meri superhero, har mushkil mein sath' },
@@ -10,7 +11,7 @@ const qualities = [
 ];
 
 export default function Qualities() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -19,7 +20,7 @@ export default function Qualities() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40, scale: 0.95 },
     visible: { 
       opacity: 1, 

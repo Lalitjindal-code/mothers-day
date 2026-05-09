@@ -38,6 +38,9 @@ export default function MusicPlayer() {
     return () => {
       window.removeEventListener('click', handleFirstInteraction);
       window.removeEventListener('touchstart', handleFirstInteraction);
+      if (audioRef.current) {
+        audioRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+      }
     };
   }, [hasStarted]);
 
